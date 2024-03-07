@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+</head>
+<body>
+
+    <script>
+
+          // data types 
+
+
+        // string
+        var student_name_ptech = "Noman Majeed";
+        document.write("Student Name " + student_name_ptech + "<br>")
+
+
+        var id = '1529937'
+        document.write("id" + id + "<br>")
+
+
+        // marks of the subjects
+        let eng = 75
+        document.write("eng =" + eng + "<br>")
+
+        let urdu = 65
+        document.write("urdu =" + urdu + "<br>")
+
+        let math = 80
+        document.write("math =" + math + "<br>")
+
+        let bio = 75
+        document.write("bio =" + bio + "<br>")
+
+        let pst = 85
+        document.write("pst =" + pst + "<br>")
+
+        let isl = 69
+        document.write("isl =" + isl + "<br>")
+
+        let phy = 60
+        document.write("phy =" + phy + "<br>")
+
+
+        // obainted marks
+        let obtainedmarks = eng + urdu + math + bio + pst + isl + phy;
+        document.write("obtained marks =" + obtainedmarks + "<br>")
+
+        // percentage
+        let percentage = (obtainedmarks / 700) * 100;
+        document.write("percentage =" + percentage.toFixed(2)+ "% <br>")
+
+        // condition
+        if(percentage <= 100 && percentage >= 80) {
+            document.write("grade A+")
+        }
+        else if(percentage <= 79 && percentage >= 70) {
+            document.write("grade A")
+        }
+        else if(percentage <= 69 && percentage >= 60) {
+            document.write("grade B")
+        }
+        else if(percentage <= 59 && percentage >= 50) {
+            document.write("grade C")
+        }
+        else if(percentage <= 49 && percentage >= 40) {
+            document.write("grade D")
+        }
+        else if(percentage <= 39 && percentage >= 30) {
+            document.write("grade E")
+        }
+        else {
+            document.write("Fail")
+        }
+
+
+        
+    </script>
+    
+
+</body>
+</html>

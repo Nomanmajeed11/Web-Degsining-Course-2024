@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marksheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: 20px auto;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Marksheet</h2>
+
+  <table>
+    <tr>
+      <th>Subject</th>
+      <th>Marks</th>
+    </tr>
+    <tr>
+      <td>Math</td>
+      <td><input type="number" id="subject1" min="0" max="100"></td>
+    </tr>
+    <tr>
+      <td>Physics</td>
+      <td><input type="number" id="subject2" min="0" max="100"></td>
+    </tr>
+    <tr>
+      <td>Chemistry</td>
+      <td><input type="number" id="subject3" min="0" max="100"></td>
+    </tr>
+    <tr>
+        <td>English</td>
+        <td><input type="number" id="subject4" min="0" max="100"></td>
+      </tr>
+      <tr>
+        <td>Urdu</td>
+        <td><input type="number" id="subject5" min="0" max="100"></td>
+      </tr>
+      <tr>
+        <td>Islamiat</td>
+        <td><input type="number" id="subject6" min="0" max="100"></td>
+      </tr>
+      <tr>
+        <td>Biology</td>
+        <td><input type="number" id="subject7" min="0" max="100"></td>
+      </tr>
+    <tr>
+      <td>Total Marks</td>
+      <td id="totalMarks">0</td>
+    </tr>
+    <tr>
+      <td>Percentage</td>
+      <td id="percentage">0%</td>
+    </tr>
+  </table>
+
+  <button onclick="calculateMarks()">Calculate</button>
+
+  <script>
+    function calculateMarks() {
+      var subject1 = parseFloat(document.getElementById('subject1').value) || 0;
+      var subject2 = parseFloat(document.getElementById('subject2').value) || 0;
+      var subject3 = parseFloat(document.getElementById('subject3').value) || 0;
+      var subject4 = parseFloat(document.getElementById('subject4').value) || 0;
+      var subject5 = parseFloat(document.getElementById('subject5').value) || 0;
+      var subject6 = parseFloat(document.getElementById('subject6').value) || 0;
+      var subject7 = parseFloat(document.getElementById('subject7').value) || 0;
+
+      var totalMarks = subject1 + subject2 + subject3 + subject4 + subject5 + subject6 + subject7;
+      var percentage = (totalMarks / 700) * 100;
+
+      document.getElementById('totalMarks').textContent = totalMarks;
+      document.getElementById('percentage').textContent = percentage.toFixed(2) + "%";
+    }
+  </script>
+
+</body>
+</html>

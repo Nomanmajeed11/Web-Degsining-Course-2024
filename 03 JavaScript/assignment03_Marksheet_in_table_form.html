@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marksheet in Table Form</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+
+  // data types 
+
+
+  // string
+var student_name_ptech = "Noman Majeed";
+document.write("Student Name =" + student_name_ptech + "<br>")
+
+var id = '1529937'
+document.write("Id =" + id + "<br>")
+
+  // marks of the subjects
+  var English = 80;
+  var Urdu = 75;
+  var Math = 90;
+  var Physics= 85;
+  var Chemistry = 81;
+  var Islamiat= 88;
+  var Biology = 78;
+
+  // Calculate total marks
+  var totalMarks = English + Urdu + Math + Physics + Chemistry + Islamiat + Biology;
+
+   // Calculate percentage
+   var percentage = (totalMarks / (7 * 100)) * 100;
+
+  // Display the marksheet in table form
+  document.write("<table>");
+  document.write("<tr><th>Subject</th><th>Marks</th></tr>");
+  document.write("<tr><td>English</td><td>" + 80 + "</td></tr>");
+  document.write("<tr><td>Urdu</td><td>" + 75 + "</td></tr>");
+  document.write("<tr><td>Math</td><td>" + 90 + "</td></tr>");
+  document.write("<tr><td>Physics</td><td>" + 85 + "</td></tr>");
+  document.write("<tr><td>Chemistry</td><td>" + 81 + "</td></tr>");
+  document.write("<tr><td>Islamiat</td><td>" + 91+ "</td></tr>");
+  document.write("<tr><td>Biology</td><td>" + 78+ "</td></tr>");
+  document.write("<tr><th>Total Marks</th><td>" + totalMarks + "</td></tr>");
+  document.write("<tr><th>Percentage</th><td>" + percentage.toFixed(2) + "%</td></tr>");
+  document.write("</table>");
+</script>
+
+</body>
+</html>
